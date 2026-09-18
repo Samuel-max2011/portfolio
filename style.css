@@ -20,6 +20,9 @@ a {
     text-decoration: none;
 }
 
+
+/* HEADER */
+
 .header {
     position: fixed;
     top: 0;
@@ -65,7 +68,7 @@ a {
     color: #58a6ff;
 }
 
-.menu-btn {
+.menu-button {
     display: none;
     border: 1px solid #30363d;
     border-radius: 6px;
@@ -75,6 +78,9 @@ a {
     font-size: 1.1rem;
     cursor: pointer;
 }
+
+
+/* HERO */
 
 .hero {
     max-width: 1200px;
@@ -117,39 +123,45 @@ a {
     font-size: 1.05rem;
 }
 
-.hero-btns {
+
+/* BUTTONS */
+
+.hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 30px;
 }
 
-.btn {
+.button {
     padding: 10px 17px;
     border-radius: 6px;
     border: 1px solid #30363d;
     transition: 0.2s ease;
 }
 
-.primary-btn {
+.primary-button {
     background: #238636;
     border-color: #2ea043;
     color: #ffffff;
 }
 
-.primary-btn:hover {
+.primary-button:hover {
     background: #2ea043;
 }
 
-.secondary-btn {
+.secondary-button {
     background: #21262d;
     color: #f0f6fc;
 }
 
-.secondary-btn:hover {
+.secondary-button:hover {
     border-color: #8b949e;
     background: #30363d;
 }
+
+
+/* TECHNOLOGY PILLS */
 
 .tech-pills {
     display: flex;
@@ -167,6 +179,9 @@ a {
     color: #8b949e;
     font-size: 0.76rem;
 }
+
+
+/* CODE WINDOW */
 
 .code-window {
     width: 100%;
@@ -221,6 +236,9 @@ a {
     color: #8b949e;
 }
 
+
+/* SECTIONS */
+
 .section {
     max-width: 1200px;
     margin: auto;
@@ -248,6 +266,9 @@ a {
     letter-spacing: -1px;
     font-weight: 500;
 }
+
+
+/* ABOUT */
 
 .about-grid {
     display: grid;
@@ -286,6 +307,9 @@ a {
     color: #8b949e;
 }
 
+
+/* SKILLS */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -314,6 +338,9 @@ a {
     color: #8b949e;
     font-size: 0.92rem;
 }
+
+
+/* PROJECTS */
 
 .projects-grid {
     display: grid;
@@ -356,12 +383,81 @@ a {
     font-size: 0.92rem;
 }
 
+
+/* MAIN PROJECT IMAGE */
+
+.project-image {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background: #161b22;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.project-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.04);
+}
+
+.project-image:hover {
+    border-color: #58a6ff;
+}
+
+
+/* PROJECT HOVER OVERLAY */
+
+.project-image a::after {
+    content: "View Project →";
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    padding: 8px 14px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #f0f6fc;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.project-image:hover a::after {
+    opacity: 1;
+}
+
+
+/* PROJECT TECHNOLOGIES */
+
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
     margin-top: 21px;
 }
+
+
+/* GITHUB LINK */
 
 .project-card > a {
     margin-top: auto;
@@ -373,6 +469,37 @@ a {
 .project-card > a:hover {
     text-decoration: underline;
 }
+
+
+/* PROJECT GALLERY */
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 18px 0 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 100px;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
+.project-gallery:has(img:only-child) {
+    grid-template-columns: 1fr;
+}
+
+.project-gallery:has(img:only-child) img {
+    height: 140px;
+}
+
+
+/* JOURNEY */
 
 .timeline {
     max-width: 850px;
@@ -406,6 +533,9 @@ a {
 .timeline-item p {
     color: #8b949e;
 }
+
+
+/* CONTACT */
 
 .contact-section {
     padding-top: 95px;
@@ -452,6 +582,9 @@ a {
     border-color: #58a6ff;
 }
 
+
+/* FOOTER */
+
 .footer {
     padding: 28px 24px;
     border-top: 1px solid #30363d;
@@ -461,8 +594,12 @@ a {
     font-size: 0.84rem;
 }
 
+
+/* TABLET */
+
 @media (max-width: 850px) {
-    .menu-btn {
+
+    .menu-button {
         display: block;
     }
 
@@ -504,7 +641,19 @@ a {
     }
 }
 
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .project-image {
+        height: 190px;
+    }
+}
+
+
 @media (max-width: 560px) {
+
     .hero {
         padding-top: 125px;
     }
@@ -529,95 +678,5 @@ a {
 
     .contact-links {
         flex-direction: column;
-    }
-}
-
-.project-image {
-    width: 100%;
-    height: 210px;
-    overflow: hidden;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    background: #161b22;
-    margin-bottom: 22px;
-    position: relative;
-}
-
-.project-image a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: top center;
-    transition: transform 0.3s ease;
-}
-
-.project-image:hover img {
-    transform: scale(1.04);
-}
-
-.project-image:hover {
-    border-color: #58a6ff;
-}
-
-.project-image a {
-    position: relative;
-}
-
-.project-image a::after {
-    content: "View Project →";
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-    padding: 8px 14px;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    color: #f0f6fc;
-    font-size: 13px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-.project-image:hover a::after {
-    opacity: 1;
-}
-
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 18px 0 20px;
-}
-
-.project-gallery img {
-    width: 100%;
-    height: 100px;
-    display: block;
-    object-fit: cover;
-    object-position: top center;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-}
-
-.project-gallery:has(img:only-child) {
-    grid-template-columns: 1fr;
-}
-
-.project-gallery:has(img:only-child) img {
-    height: 140px;
-}
-
-@media (max-width: 700px) {
-    .project-image {
-        height: 190px;
     }
 }
