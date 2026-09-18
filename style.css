@@ -701,3 +701,47 @@ a {
     border-color: #58a6ff;
     background: #30363d;
 }
+
+.github-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 28px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.github-card:hover {
+    border-color: #58a6ff;
+}
+
+.github-info h3 {
+    margin: 0 0 8px;
+    color: #f0f6fc;
+    font-size: 1.2rem;
+}
+
+.github-info p {
+    margin: 0;
+    color: #8b949e;
+    line-height: 1.7;
+}
+
+.github-card .button {
+    flex-shrink: 0;
+}
+
+@media (max-width: 650px) {
+    .github-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .github-card .button {
+        width: 100%;
+        text-align: center;
+    }
+}
