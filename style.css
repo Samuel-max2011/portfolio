@@ -680,3 +680,24 @@ a {
         flex-direction: column;
     }
 }
+
+.projects-more {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.projects-more a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background: #21262d;
+    color: #58a6ff;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.projects-more a:hover {
+    border-color: #58a6ff;
+    background: #30363d;
+}
