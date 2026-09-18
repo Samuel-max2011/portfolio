@@ -745,3 +745,18 @@ a {
         text-align: center;
     }
 }
+
+.github-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    border: 1px solid #30363d;
+    border-radius: 50%;
+    color: #f0f6fc;
+    font-size: 15px;
+    font-weight: normal;
+    vertical-align: middle;
+}
